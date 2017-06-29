@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A map of Bay Area ice cream shops and
+      tea cafes">
+    <title>Bay Area Ice Cream Shops and Tea Cafes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 options-box">
+          <header>
+            <h1>Bay Area Ice Cream Shops and Tea Cafes</h1>
+          </header>
+          <div>
+            <h4>Filter locations by name, city, or neighborhood:</h4>
+            <input type="text" id="search-str" placeholder="Enter text here..."
+              data-bind="textInput: filterKeyword">
+          </div>
+          <nav class="cafe-list">
+            <ul data-bind="foreach: filteredCafeList">
+              <li data-bind="text: title, click: $parent.cafeClick"></li>
+            </ul>
+          </nav>
+        </div>
+        <main class="col-md-9">
+          <div id="map"></div>
+        </main>
+      </div>
+    </div>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/knockout-latest.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNuwljtAZ8UGMJ6z1OwjQpW41k26sIFWg&callback=googleSuccess" onerror=googleError();></script>
+</body>
+</html>
