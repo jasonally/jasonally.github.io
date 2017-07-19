@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">
+        <link rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Jason Ally - Udacity Portfolio</title>
+    </head>
+    <body>
+        <!-- Per Bootstrap style, wrap everything in a container div.
+        Use container-fluid to make the design responsive. -->
+        <div class="container-fluid">
+            <!--
+            Columns in the row need to add up to 12.
+            -->
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <h1 class="title-super text-muted">Jason Ally</h1>
+                    <h4>Full Stack Web Developer Nanodegree Graduate</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- First media query. imgs are wrapped inside the picture
+                    tag for responsiveness. -->
+                    <picture>
+                        <source media="(min-width: 750px)" 
+                            srcset="images/gg-bridge-1700_large_2x.jpg 2x, 
+                            images/gg-bridge_850_large_1x.jpg 1x" />
+                        <source media="(min-width: 500px)" 
+                            srcset="images/gg-bridge-500_medium.jpg" />
+                        <img class="img-responsive" src="images/gg-bridge-400_small.jpg" 
+                            alt="Golden Gate Bridge" data-toggle="modal" 
+                            data-target="#main-picture">
+                    </picture>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-muted">Featured Projects</h2>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <!-- Since these pictures will always be small, no need to
+                    download a very high-resolution picture for use on
+                    the main page. But if user clicks a picture, have larger
+                    picture ready to display. See modals for implementation. -->
+                    <picture>
+                        <source media="(min-width: 500px)" 
+                            srcset="images/movie-500_medium.jpg" />
+                        <img class="img-responsive" src="images/movie-400_small.jpg" 
+                            alt="Movie popcorn" data-toggle="modal" data-target="#project-1">
+                    </picture>
+                    <a class="portfolio-link" 
+                        href="https://github.com/jasonally/movie-trailer-website" 
+                        target="_blank">Movie Trailer Site</a>
+                </div>
+                <div class="col-md-4">
+                    <picture>
+                        <source media="(min-width: 500px)" 
+                            srcset="images/portfolio-500_medium.jpg" />
+                        <img class="img-responsive" 
+                            src="images/portfolio-400_small.jpg" alt="Portfolio website" 
+                            data-toggle="modal" data-target="#project-2">
+                    </picture>
+                    <a class="portfolio-link" href="https://github.com/jasonally/portfolio-site" 
+                        target="_blank">Portfolio Site</a>
+                </div>
+                <div class="col-md-4">
+                    <picture>
+                        <source media="(min-width: 500px)" srcset="images/blog-500_medium.jpg" />
+                        <img class="img-responsive" src="images/blog-400_small.jpg" alt="Blog" 
+                            data-toggle="modal" data-target="#project-3">
+                    </picture>
+                    <a class="portfolio-link" href="https://github.com/jasonally/multi-user-blog" 
+                        target="_blank">Multi-User Blog</a>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <!-- Since these pictures will always be small, no need to
+                    download a very high-resolution picture for use on
+                    the main page. But if user clicks a picture, have larger
+                    picture ready to display. See modals for implementation. -->
+                    <picture>
+                        <source media="(min-width: 500px)" srcset="images/tourney-500_medium.jpg" />
+                        <img class="img-responsive" src="images/tourney-400_small.jpg" 
+                            alt="Chess match" data-toggle="modal" data-target="#project-4">
+                    </picture>
+                    <a class="portfolio-link" href="https://github.com/jasonally/tournament-results"
+                        target="_blank">Tournament Database</a>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <picture>
+                        <source media="(min-width: 500px)" 
+                            srcset="images/item-catalog-500_medium.jpg" />
+                        <img class="img-responsive" src="images/item-catalog-400_small.jpg" 
+                            alt="Item catalog" data-toggle="modal" data-target="#project-5">
+                    </picture>
+                    <a class="portfolio-link" href="https://github.com/jasonally/item-catalog" 
+                        target="_blank">Item Catalog</a>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <picture>
+                        <source media="(min-width: 500px)" srcset="images/map-500_medium.jpg" />
+                        <img class="img-responsive" src="images/map-400_small.jpg" 
+                            alt="Neighborhood map" data-toggle="modal" data-target="#project-6">
+                    </picture>
+                    <a class="portfolio-link" href="https://github.com/jasonally/neighborhood-map" 
+                        target="_blank">Neighborhood Map</a>
+                    <br>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <!-- Since these pictures will always be small, no need to
+                    download a very high-resolution picture for use on
+                    the main page. But if user clicks a picture, have larger
+                    picture ready to display. See modals for implementation. -->
+                    <picture>
+                        <source media="(min-width: 500px)" srcset="images/server-500_medium.jpg" />
+                        <img class="img-responsive" src="images/server-400_small.jpg" 
+                            alt="Server room" data-toggle="modal" data-target="#project-7">
+                    </picture>
+                    <a class="portfolio-link" 
+                        href="https://github.com/jasonally/linux-server-config" 
+                        target="_blank">Server Configuration</a>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        
+        <!-- Modals -->
+        <div class="modal fade" id="main-picture" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Udacity Portfolio</h4>
+                    </div>
+                    <div class="modal-body">
+                        Welcome to my portfolio site. Here you'll find descriptions about the 
+                        projects I completed as part of my 
+                        <a href="https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004" 
+                        target="_blank">Udacity Full Stack Web Developer Nanodegree program</a> as 
+                        well as links to their associated GitHub repositories.
+                        <br><br>
+                        This site is a fork of my second project, the 
+                        <a href="https://github.com/jasonally/portfolio-site" target="_blank">
+                        responsive portfolio site</a>. This site is fully responsive and the display
+                        will automatically adjust based on viewport width. The images are also 
+                        responsive, so photos of different resolutions will download depending on 
+                        viewport width. While the layout of my website is in HTML (no surprises 
+                        there), I'm using jQuery for a couple of JavaScript features and Bootstrap 
+                        for CSS.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="project-1" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Movie Trailer Site</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Media queries to pick the right picture for the viewport. -->
+                        <a href="https://github.com/jasonally/movie-trailer-website" 
+                            target="_blank">
+                            <picture>
+                                <source media="(min-width: 750px)" 
+                                    srcset="images/movie-1700_large_2x.jpg 2x, 
+                                    images/movie-850_large_1x.jpg 1x" />
+                                <source media="(min-width: 500px)" 
+                                    srcset="images/movie-500_medium.jpg" />
+                                <img class="img-responsive" 
+                                    src="images/movie-400_small.jpg" alt="Movie popcorn">
+                            </picture>
+                        </a>
+                        <br>
+                        This project uses a backend Python script to create a 
+                        <a href="https://jasonally.github.io/movie-trailer-website/index.html" 
+                        target="_blank">site</a> with information about my favorite movies as well 
+                        as the ability to watch their trailers from YouTube.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Portfolio Site</h4>
+                    </div>
+                    <div class="modal-body">
+                        <a href="https://github.com/jasonally/portfolio-site" target="_blank">
+                            <picture>
+                                <source media="(min-width: 750px)" 
+                                    srcset="images/portfolio-1700_large_2x.jpg 2x, 
+                                    images/portfolio-850_large_1x.jpg 1x" />
+                                <source media="(min-width: 500px)" 
+                                    srcset="images/portfolio-500_medium.jpg" />
+                                <img class="img-responsive" src="images/portfolio-400_small.jpg" 
+                                    alt="Portfolio website">
+                            </picture>
+                        </a>
+                        <br>
+                        This project uses concepts in Udacity's 
+                        <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304" 
+                        target="_blank">Intro to HTML and CSS</a>, 
+                        <a href="https://www.udacity.com/course/responsive-web-design-fundamentals--ud893" 
+                        target="_blank">Responsive Web Design Fundamentals</a>, and 
+                        <a href="https://www.udacity.com/course/responsive-images--ud882" 
+                        target="_blank">Responsive Images</a> courses to build a 
+                        <a href="https://jasonally.github.io/portfolio-site/" target="_blank">
+                        mock portfolio page</a>. The page has both responsive design and images. The
+                        page dynamically resizes using Bootstrap and downloads the appropriate 
+                        images based on viewport width.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Multi-User Blog</h4>
+                    </div>
+                    <div class="modal-body">
+                        <a href="https://github.com/jasonally/multi-user-blog" target="_blank">
+                            <picture>
+                                <source media="(min-width: 750px)" 
+                                    srcset="images/blog-1700_large_2x.jpg 2x, 
+                                    images/blog-850_large_1x.jpg 1x" />
+                                <source media="(min-width: 500px)" 
+                                    srcset="images/blog-500_medium.jpg" />
+                                <img class="img-responsive" 
+                                    src="images/blog-400_small.jpg" alt="Blog">
+                            </picture>
+                        </a>
+                        <br>
+                        This project uses material from Udacity's 
+                        <a href="https://www.udacity.com/course/intro-to-backend--ud171"
+                        target="_blank">Intro to Backend</a> course to build a 
+                        <a href="http://jasonally-fsnd-blog.appspot.com/" target="_blank">multi-user
+                        blog</a>. Users can create accounts on the blog, post entries, and like and 
+                        comment on other users' posts.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Tournament Database</h4>
+                    </div>
+                    <div class="modal-body">
+                        <a href="https://github.com/jasonally/tournament-results" target="_blank">
+                            <picture>
+                                <source media="(min-width: 750px)" 
+                                    srcset="images/tourney-1700_large_2x.jpg 2x, 
+                                    images/tourney-850_large_1x.jpg 1x" />
+                                <source media="(min-width: 500px)" 
+                                    srcset="images/tourney-500_medium.jpg" />
+                                <img class="img-responsive" src="images/tourney-400_small.jpg" 
+                                    alt="Chess match">
+                            </picture>
+                        </a>
+                        <br>
+                        This project uses concepts from Udacity's 
+                        <a href="https://www.udacity.com/course/intro-to-relational-databases--ud197" 
+                        target="_blank">Intro to Relational Databases</a> course to build a 
+                        tournament database app. The database is for use in a Swiss-style tournament
+                        where competitors are matched based on similar win-loss records. The
+                        database schema uses <a href="https://www.postgresql.org/" target="_blank">
+                        PostgreSQL</a> while the functions that interact with the schema are in a 
+                        corresponding Python file.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Item Catalog</h4>
+                    </div>
+                    <div class="modal-body">
+                        <a href="https://github.com/jasonally/item-catalog" target="_blank">
+                            <picture>
+                                <source media="(min-width: 750px)"
+                                    srcset="images/item-catalog-1700_large_2x.jpg 2x, 
+                                    images/item-catalog-850_large_1x.jpg 1x" />
+                                <source media="(min-width: 500px)" 
+                                    srcset="images/item-catalog-500_medium.jpg" />
+                                <img class="img-responsive" src="images/item-catalog-400_small.jpg"
+                                    alt="Item catalog">
+                            </picture>
+                        </a>
+                        <br>
+                        This project uses concepts from Udacity's 
+                        <a href="https://www.udacity.com/course/full-stack-foundations--ud088" 
+                        target="_blank">Full Stack Foundations</a> and 
+                        <a href="https://www.udacity.com/course/authentication-authorization-oauth--ud330" 
+                        target="_blank">Authentication and Authorization</a> courses to build an 
+                        item catalog web application. The app catalogs reading lists and books 
+                        associated with each list. Users can log into the app using Google or 
+                        Facebook account authorization, create reading lists and add books to the 
+                        reading lists they create. In addition, the app also features JSON endpoints
+                        which allows users to access data in the catalog in a serialized format. The
+                        app uses the <a href="http://flask.pocoo.org/" target="_blank">Flask</a> 
+                        development framework, <a href="https://www.sqlalchemy.org/" 
+                        target="_blank">SQLAlchemy</a>, and Google and Facebook authorization APIs.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Neighborhood Map</h4>
+                    </div>
+                    <div class="modal-body">
+                        <a href="https://github.com/jasonally/neighborhood-map" target="_blank">
+                            <picture>
+                                <source media="(min-width: 750px)" 
+                                    srcset="images/map-1700_large_2x.jpg 2x, 
+                                    images/map-850_large_1x.jpg 1x" />
+                                <source media="(min-width: 500px)" 
+                                    srcset="images/map-500_medium.jpg" />
+                                <img class="img-responsive" 
+                                    src="images/map-400_small.jpg" alt="Neighborhood map">
+                            </picture>
+                        </a>
+                        <br>
+                        This project uses concepts from Udacity's section on The Frontend: 
+                        JavaScript & AJAX to build a mobile-friendly, single-page application 
+                        featuring the Google Maps API. 
+                        <a href="https://jasonally.github.io/neighborhood-map" target="_blank">
+                        My map</a> displays my favorite ice cream shops and tea cafes in the San 
+                        Francisco Bay Area. Users can select a location from the map or from the 
+                        displayed list, and users can also use the search box to filter the 
+                        displayed list by location name, city, or neighborhood.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Server Configuration</h4>
+                    </div>
+                    <div class="modal-body">
+                        <a href="https://github.com/jasonally/linux-server-config" target="_blank">
+                            <picture>
+                                <source media="(min-width: 750px)" 
+                                    srcset="images/server-1700_large_2x.jpg 2x, 
+                                    images/server-850_large_1x.jpg 1x" />
+                                <source media="(min-width: 500px)" 
+                                    srcset="images/server-500_medium.jpg" />
+                                <img class="img-responsive" src="images/server-400_small.jpg" 
+                                    alt="Server room">
+                            </picture>
+                        </a>
+                        <br>
+                        The final project in the program uses concepts from the Deploying to Linux 
+                        Servers section of Udacity's Full Stack Web Developer Nanodegree program to 
+                        configure an Ubuntu server hosted on Amazon Lightsail. The server is secured
+                        from common attack vectors, contains a properly configured PostgreSQL
+                        database, and has my previously completed Item Catalog project running using
+                        Apache HTTP Server.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" 
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
